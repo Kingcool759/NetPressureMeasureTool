@@ -28,10 +28,9 @@ public class DownLoadTask extends AsyncTask<String, Integer, Integer> {
     public static final int TYPE_PAUSED = 2;
     public static final int TYPE_CANCLED = 3;
 
-    private DownloadListener listener;
+    private final DownloadListener listener;
     private boolean isPaused = false;
     private boolean isCancled = false;
-    private boolean isSuccess = false;
     private int lastProgress;
 
     //构造方法中传入我们定义的接口，待会就可以把下载的结果通过这个参数进行回调
@@ -152,7 +151,7 @@ public class DownLoadTask extends AsyncTask<String, Integer, Integer> {
      * 当后台任务执行完毕并调用return返回时，这个方法很快会被调用。返回的数据会被作为参数传到这个方法中
      * 可根据返回数据更新UI。提醒任务结果，关闭进度条等。
      *
-     * @param integer
+     * @param integer 异步任务返回下载结果
      */
     @Override
     protected void onPostExecute(Integer integer) {

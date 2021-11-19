@@ -19,6 +19,11 @@
   ```
 - **循环下载**
   ```
+  [可作为压测工具]
+  DownloadListener中在监听文件下载成功后，删除文件，通过DownloadBinder重新开启下载任务
+  ```
+- **支持断点续传**
+  ```
   DownloadListener中在监听文件下载成功后，删除文件，通过DownloadBinder重新开启下载任务
   ```
 - **可视化界面**
@@ -31,5 +36,5 @@
   ```
 - **检测实时网速**
   ```
-  实时网速测算：NetWorkSpeedUtils
+  实时网速测算：NetWorkSpeedUtils.class
   ```
